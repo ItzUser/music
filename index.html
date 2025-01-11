@@ -50,28 +50,33 @@
             font-size: 0.9em;
             color: #aaa;
         }
+        #ytMusicFrame {
+            width: 100%;
+            height: 400px;
+            border: none;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
     </style>
     <script>
         function openYTMusic() {
             // URL untuk membuka YouTube Music
             const webLink = "https://music.youtube.com/watch?v=58-AKkNMZNQ&si=9sSPBnwLwuoJTxNR";
-            const appLink = "https://music.youtube.com/watch?v=58-AKkNMZNQ&si=9sSPBnwLwuoJTxNR";
 
-            // Mencoba membuka aplikasi YouTube Music terlebih dahulu
-            window.location.href = appLink;
-
-            // Setelah 1 detik, alihkan ke versi web jika aplikasi tidak terbuka
-            setTimeout(function() {
-                window.location.href = webLink;
-            }, 1000);
+            // Menggunakan iframe untuk memuat konten YouTube Music
+            const iframe = document.getElementById('ytMusicFrame');
+            iframe.src = webLink;
         }
     </script>
 </head>
 <body>
     <div class="container">
         <h1>Open YouTube Music</h1>
-        <p>Klik tombol di bawah untuk membuka lagu di aplikasi YouTube Music. Jika aplikasi tidak terpasang, Anda akan diarahkan ke versi web.</p>
+        <p>Klik tombol di bawah untuk membuka lagu di YouTube Music tanpa berpindah halaman.</p>
         <button onclick="openYTMusic()">Open YouTube Music</button>
+
+        <!-- Iframe untuk menampilkan YouTube Music -->
+        <iframe id="ytMusicFrame" src="" frameborder="0"></iframe>
     </div>
     <div class="footer">
         <p>&copy; 2024 IVENNIR | Hak Cipta Dilindungi</p>
