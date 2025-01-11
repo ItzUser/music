@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open YouTube Music</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 40px auto;
+        }
+        h1 {
+            font-size: 1.8em;
+            color: #d93025;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        #countdown {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #d93025;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff5c5c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #e53e3e;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+    </style>
+    <script>
+        function openYTMusic() {
+            // URL untuk membuka YouTube Music
+            const webLink = "https://music.youtube.com/watch?v=58-AKkNMZNQ&si=9sSPBnwLwuoJTxNR";
+            const appLink = "https://music.youtube.com/watch?v=58-AKkNMZNQ&si=9sSPBnwLwuoJTxNR";
+
+            // Mencoba membuka aplikasi YouTube Music terlebih dahulu
+            window.location.href = appLink;
+
+            // Setelah 1 detik, alihkan ke versi web jika aplikasi tidak terbuka
+            setTimeout(function() {
+                window.location.href = webLink;
+            }, 1000);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Open YouTube Music</h1>
+        <p>Klik tombol di bawah untuk membuka lagu di aplikasi YouTube Music. Jika aplikasi tidak terpasang, Anda akan diarahkan ke versi web.</p>
+        <button onclick="openYTMusic()">Open YouTube Music</button>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 IVENNIR | Hak Cipta Dilindungi</p>
+    </div>
+</body>
+</html>
