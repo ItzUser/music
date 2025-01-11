@@ -6,15 +6,18 @@
     <title>Spotify</title>
     <style>
         body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+            margin: 0;
             font-family: Arial, sans-serif;
             color: #333;
             text-align: center;
-            padding: 20px;
-            margin: 0;
-            min-height: 100vh; /* Ganti height dengan min-height */
         }
         .container {
-            background-color: rgba(200, 247, 197,1); /* Opasitas 50% */
+            flex-grow: 1;
+            background-color: rgba(200, 247, 197, 1);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -43,16 +46,25 @@
         }
         .footer {
             margin-top: 30px;
+            padding: 20px 0;
             font-size: 0.9em;
             color: #aaa;
-            padding-bottom: 20px; /* Tambahkan padding bawah */
         }
         #spotifyFrame {
             width: 100%;
-            height: 380px;
-            border: none;
+            max-height: 300px;
+            height: auto;
             margin-top: 20px;
             border-radius: 10px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+                margin: 20px auto;
+            }
+            #spotifyFrame {
+                max-height: 250px;
+            }
         }
     </style>
     <script>
@@ -63,7 +75,6 @@
     </script>
 </head>
 <body>
-    
     <div class="container">
         <h1>Apocalypse | Cigarettes After Sex</h1>
         <iframe id="spotifyFrame" src="" frameborder="0"></iframe>
