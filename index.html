@@ -25,17 +25,6 @@
             object-fit: cover;
             z-index: -1; /* Video di bawah konten */
         }
-        /* Gelap di atas video */
-        body::after {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Gelap dengan opasitas 50% */
-            z-index: -1; /* Lapisan gelap di bawah konten */
-        }
         .container {
             background-color: rgba(0, 0, 0, 0.5); /* Opasitas 50% untuk background container */
             padding: 20px;
