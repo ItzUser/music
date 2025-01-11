@@ -23,8 +23,9 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -2; /* Menempatkan video di bawah konten */
+            z-index: -2; /* Video di bawah konten */
         }
+        /* Gelap di atas video */
         body::after {
             content: '';
             position: absolute;
@@ -36,12 +37,13 @@
             z-index: -1; /* Lapisan gelap di bawah konten */
         }
         .container {
-            background-color: rgba(255, 255, 255, 0.5); /* Opasitas 50% */
+            background-color: rgba(255, 255, 255, 0.5); /* Opasitas 50% untuk background container */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 500px;
             margin: 40px auto;
+            z-index: 1; /* Konten berada di atas lapisan video dan lapisan gelap */
         }
         h1 {
             font-size: 1.8em;
