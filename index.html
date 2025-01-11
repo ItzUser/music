@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open YouTube Music</title>
+    <title>Open Spotify</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,19 +22,14 @@
         }
         h1 {
             font-size: 1.8em;
-            color: #d93025;
+            color: #1DB954; /* Warna hijau khas Spotify */
         }
         p {
             font-size: 1.2em;
         }
-        #countdown {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #d93025;
-        }
         button {
             padding: 10px 20px;
-            background-color: #ff5c5c;
+            background-color: #1DB954;
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -43,40 +38,40 @@
             margin-top: 20px;
         }
         button:hover {
-            background-color: #e53e3e;
+            background-color: #1ed760;
         }
         .footer {
             margin-top: 30px;
             font-size: 0.9em;
             color: #aaa;
         }
-        #ytMusicFrame {
+        #spotifyFrame {
             width: 100%;
-            height: 400px;
+            height: 380px;
             border: none;
             margin-top: 20px;
             border-radius: 10px;
         }
     </style>
     <script>
-        function openYTMusic() {
-            // URL untuk membuka YouTube Music
-            const webLink = "https://open.spotify.com/track/3be9ACTxtcL6Zm4vJRUiPG";
+        function openSpotify() {
+            // URL Spotify untuk embed
+            const embedLink = "https://open.spotify.com/track/3be9ACTxtcL6Zm4vJRUiPG"; // Ganti dengan track, album, atau playlist ID Anda
 
-            // Menggunakan iframe untuk memuat konten YouTube Music
-            const iframe = document.getElementById('ytMusicFrame');
-            iframe.src = webLink;
+            // Menggunakan iframe untuk memuat konten Spotify
+            const iframe = document.getElementById('spotifyFrame');
+            iframe.src = embedLink;
         }
     </script>
 </head>
 <body>
     <div class="container">
-        <h1>Open YouTube Music</h1>
-        <p>Klik tombol di bawah untuk membuka lagu di YouTube Music tanpa berpindah halaman.</p>
-        <button onclick="openYTMusic()">Open YouTube Music</button>
+        <h1>Open Spotify</h1>
+        <p>Klik tombol di bawah untuk membuka lagu di Spotify tanpa berpindah halaman.</p>
+        <button onclick="openSpotify()">Open Spotify</button>
 
-        <!-- Iframe untuk menampilkan YouTube Music -->
-        <iframe id="ytMusicFrame" src="" frameborder="0"></iframe>
+        <!-- Iframe untuk menampilkan Spotify -->
+        <iframe id="spotifyFrame" src="" frameborder="0"></iframe>
     </div>
     <div class="footer">
         <p>&copy; 2024 IVENNIR | Hak Cipta Dilindungi</p>
