@@ -17,7 +17,7 @@
         }
         /* Video background */
         video.background-video {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
@@ -73,11 +73,13 @@
         }
     </script>
 </head>
-<body>  
+<body>
+    <!-- Video background -->
     <video class="background-video" autoplay muted loop>
         <source src="lv_0_20250111150348.mp4" type="video/mp4"> <!-- Ganti dengan path video kamu -->
         Browser Anda tidak mendukung elemen video.
     </video>
+    
     <div class="container">
         <h1>Apocalypse | Cigarettes After Sex</h1>
         <iframe id="spotifyFrame" src="" frameborder="0"></iframe>
